@@ -18,16 +18,80 @@ namespace LaboratoryNumber_3WinForms
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Index());
         }
     }
+    public class Node
+    {
+        private int info;
+        private Node link;
+        // Класс «Узел односвязного списка»
+        // информационное поле узла
+        // поле связи узла
+        public int Info
+        {
+            get { return info; }
+            set { info = value; }
+        }
 
+        // свойства
+        public Node Link
+        {
+            get { return link; }
+            set { link = value; }
+        }
+        public Node() { }
+
+        public Node(int info) // конструкторы
+        {
+            Info = info;
+        }
+        public Node(int info, Node link)
+        {
+            Info = info; Link = link;
+        }
+    }
+    public class SingleLinkedList// Класс «Односвязные списки»
+    {
+        private Node first; // ссылка на первый узел списка
+        public SingleLinkedList() // конструктор: инициализация пустого списка
+        {
+            first = null;
+        }
+        public void InsertBeforeFirst(int data)
+        {
+            Node p = new Node(data);
+            if (first == null)
+            {
+                first = p;
+            }
+            else
+            { 
+                p.Link = first; 
+                first = p; 
+            }
+        }
+        public void Destroy()
+        {
+            first = null;
+        }
+        public void Print(ListBox listbox)
+        {
+            Node p = first;
+            while (p != null)
+            {
+                int num = p.Info;
+                listbox.Items.Add(num.ToString());
+                p = p.Link;
+            }
+        }
+    }
     public class TreeNode // Класс «Узел бинарного дерева»
     {
-        private char info; // информационное поле
+        private int info; // информационное поле
         private TreeNode left; // ссылка на левое поддерево
         private TreeNode right; // ссылка на правое поддерево
-        public char Info
+        public int Info
         {
             get { return info; }
             set { info = value; }
@@ -44,11 +108,11 @@ namespace LaboratoryNumber_3WinForms
             set { right = value; }
         }
         public TreeNode() { } // конструкторы
-        public TreeNode(char info)
+        public TreeNode(int info)
         {
             Info = info;
         }
-        public TreeNode(char info, TreeNode left, TreeNode right)
+        public TreeNode(int info, TreeNode left, TreeNode right)
         {
             Info = info; Left = left; Right = right;
         }
@@ -77,7 +141,6 @@ namespace LaboratoryNumber_3WinForms
                 KLP(textbox, root.Right); // обойти правое поддерево в нисходящем порядке
             }
         }
-
         public void LPK(TextBox textbox, TreeNode root) // root – ссылка на корень дерева и любого из деревьев
         {
             if (root != null) // дерево не пусто?
@@ -97,16 +160,15 @@ namespace LaboratoryNumber_3WinForms
             }
 
         }
-        public static void CreatMassT(TextBox textbox1, TextBox textbox2, TextBox textbox3, char[] dates)
+        public static void CreatMassT(TextBox textbox1, TextBox textbox2, TextBox textbox3, int[] dates)
         {
             int count = 0;
-            T.Root = T.CreateRecursive(dates.Length, dates, count);
+            T.Root = T.CreateRecursive(dates.Length, dates, ref count);
             T.KLP(textbox1, T.Root);
             T.LPK(textbox2, T.Root);
             T.LKP(textbox3, T.Root);
 
         }
-
         public int RecursionCount(TreeNode root)
         {
             int count;
@@ -114,24 +176,45 @@ namespace LaboratoryNumber_3WinForms
             else count = 1 + RecursionCount(root.Left) + RecursionCount(root.Right);
             return count;
         }
-        public TreeNode CreateRecursive(int n, char[] dates, int count)
+        public TreeNode CreateRecursive(int n, int[] dates, ref int count)
         {
-            char x; TreeNode root;
-            if (n == 0) root = null;
+            int x; TreeNode root;
+            if (n == 0) { root = null;}
             else
             {
                 x = dates[count];
-                count++;
                 root = new TreeNode(x);
-                root.Left = CreateRecursive(n / 2, dates, count);
-                root.Right = CreateRecursive(n - n / 2 - 1, dates, count);
-            }
+                count++;
+                root.Left = CreateRecursive(n / 2, dates, ref count);
+                root.Right = CreateRecursive(n - n / 2 - 1, dates, ref count);            }
             return root;
         }
 
         public void Destroy() // разрушение дерева
         {
             root = null;
+        }
+
+        public static SingleLinkedList l1 = new SingleLinkedList();
+        public static SingleLinkedList l2 = new SingleLinkedList();
+
+        public static void KLPing(TreeNode root, int number) // root – ссылка на корень дерева и любого из деревьев
+        {
+            if (root != null) // дерево не пусто?
+            {
+                if (root.Info > number) l1.InsertBeforeFirst(root.Info);
+                else l2.InsertBeforeFirst(root.Info);
+                KLPing(root.Left, number); // обойти левое поддерево в нисходящем порядке
+                KLPing(root.Right, number); // обойти правое поддерево в нисходящем порядке
+            }
+        }
+        public static void Task(ListBox listbox1, ListBox listbox2, int number)
+        {
+            l1.Destroy();
+            l2.Destroy();
+            KLPing(T.Root, number);
+            l1.Print(listbox1);
+            l2.Print(listbox2);
         }
     }
 }

@@ -3,9 +3,11 @@ C:\ДВОРЯНЧИКОВ ДМИТРИЙ\Microsoft Visual Studio\LaboratoryNumbe
 C:\ДВОРЯНЧИКОВ ДМИТРИЙ\Microsoft Visual Studio\LaboratoryNumber_3WinForms\LaboratoryNumber_3WinForms\bin\Debug\LaboratoryNumber_3WinForms.pdb
 C:\ДВОРЯНЧИКОВ ДМИТРИЙ\Microsoft Visual Studio\LaboratoryNumber_3WinForms\LaboratoryNumber_3WinForms\obj\Debug\LaboratoryNumber_3WinForms.csproj.AssemblyReference.cache
 C:\ДВОРЯНЧИКОВ ДМИТРИЙ\Microsoft Visual Studio\LaboratoryNumber_3WinForms\LaboratoryNumber_3WinForms\obj\Debug\LaboratoryNumber_3WinForms.csproj.SuggestedBindingRedirects.cache
-C:\ДВОРЯНЧИКОВ ДМИТРИЙ\Microsoft Visual Studio\LaboratoryNumber_3WinForms\LaboratoryNumber_3WinForms\obj\Debug\LaboratoryNumber_3WinForms.Form1.resources
 C:\ДВОРЯНЧИКОВ ДМИТРИЙ\Microsoft Visual Studio\LaboratoryNumber_3WinForms\LaboratoryNumber_3WinForms\obj\Debug\LaboratoryNumber_3WinForms.Properties.Resources.resources
 C:\ДВОРЯНЧИКОВ ДМИТРИЙ\Microsoft Visual Studio\LaboratoryNumber_3WinForms\LaboratoryNumber_3WinForms\obj\Debug\LaboratoryNumber_3WinForms.csproj.GenerateResource.cache
 C:\ДВОРЯНЧИКОВ ДМИТРИЙ\Microsoft Visual Studio\LaboratoryNumber_3WinForms\LaboratoryNumber_3WinForms\obj\Debug\LaboratoryNumber_3WinForms.csproj.CoreCompileInputs.cache
 C:\ДВОРЯНЧИКОВ ДМИТРИЙ\Microsoft Visual Studio\LaboratoryNumber_3WinForms\LaboratoryNumber_3WinForms\obj\Debug\LaboratoryNumber_3WinForms.exe
 C:\ДВОРЯНЧИКОВ ДМИТРИЙ\Microsoft Visual Studio\LaboratoryNumber_3WinForms\LaboratoryNumber_3WinForms\obj\Debug\LaboratoryNumber_3WinForms.pdb
+C:\ДВОРЯНЧИКОВ ДМИТРИЙ\Microsoft Visual Studio\LaboratoryNumber_3WinForms\LaboratoryNumber_3WinForms\obj\Debug\LaboratoryNumber_3WinForms.Index.resources
+C:\ДВОРЯНЧИКОВ ДМИТРИЙ\Microsoft Visual Studio\LaboratoryNumber_3WinForms\LaboratoryNumber_3WinForms\obj\Debug\LaboratoryNumber_3WinForms.Task.resources
+C:\ДВОРЯНЧИКОВ ДМИТРИЙ\Microsoft Visual Studio\LaboratoryNumber_3WinForms\LaboratoryNumber_3WinForms\obj\Debug\LaboratoryNumber_3WinForms.ProgramInfo.resources

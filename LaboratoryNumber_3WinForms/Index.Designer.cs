@@ -1,6 +1,6 @@
 ﻿namespace LaboratoryNumber_3WinForms
 {
-    partial class Form1
+    partial class Index
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -34,9 +34,9 @@
             this.listBoxElements = new System.Windows.Forms.ListBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.cозданиеДереваToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.созданиеДереваToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.обработкаДереваВСоответствииСЗаданиемToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.разрушениеДереваToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.созданиеДереваToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
@@ -45,6 +45,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.buttonRemoveElement = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -93,7 +94,7 @@
             this.выходToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(650, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(650, 28);
             this.menuStrip1.TabIndex = 7;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -107,18 +108,6 @@
             this.cозданиеДереваToolStripMenuItem.Size = new System.Drawing.Size(60, 24);
             this.cозданиеДереваToolStripMenuItem.Text = "Menu";
             // 
-            // обработкаДереваВСоответствииСЗаданиемToolStripMenuItem
-            // 
-            this.обработкаДереваВСоответствииСЗаданиемToolStripMenuItem.Name = "обработкаДереваВСоответствииСЗаданиемToolStripMenuItem";
-            this.обработкаДереваВСоответствииСЗаданиемToolStripMenuItem.Size = new System.Drawing.Size(412, 26);
-            this.обработкаДереваВСоответствииСЗаданиемToolStripMenuItem.Text = "Обработка дерева в соответствии с заданием";
-            // 
-            // разрушениеДереваToolStripMenuItem
-            // 
-            this.разрушениеДереваToolStripMenuItem.Name = "разрушениеДереваToolStripMenuItem";
-            this.разрушениеДереваToolStripMenuItem.Size = new System.Drawing.Size(412, 26);
-            this.разрушениеДереваToolStripMenuItem.Text = "Разрушение дерева";
-            // 
             // созданиеДереваToolStripMenuItem
             // 
             this.созданиеДереваToolStripMenuItem.Name = "созданиеДереваToolStripMenuItem";
@@ -126,11 +115,26 @@
             this.созданиеДереваToolStripMenuItem.Text = "Создание дерева";
             this.созданиеДереваToolStripMenuItem.Click += new System.EventHandler(this.созданиеДереваToolStripMenuItem_Click);
             // 
+            // обработкаДереваВСоответствииСЗаданиемToolStripMenuItem
+            // 
+            this.обработкаДереваВСоответствииСЗаданиемToolStripMenuItem.Name = "обработкаДереваВСоответствииСЗаданиемToolStripMenuItem";
+            this.обработкаДереваВСоответствииСЗаданиемToolStripMenuItem.Size = new System.Drawing.Size(412, 26);
+            this.обработкаДереваВСоответствииСЗаданиемToolStripMenuItem.Text = "Обработка дерева в соответствии с заданием";
+            this.обработкаДереваВСоответствииСЗаданиемToolStripMenuItem.Click += new System.EventHandler(this.обработкаДереваВСоответствииСЗаданиемToolStripMenuItem_Click);
+            // 
+            // разрушениеДереваToolStripMenuItem
+            // 
+            this.разрушениеДереваToolStripMenuItem.Name = "разрушениеДереваToolStripMenuItem";
+            this.разрушениеДереваToolStripMenuItem.Size = new System.Drawing.Size(412, 26);
+            this.разрушениеДереваToolStripMenuItem.Text = "Разрушение дерева";
+            this.разрушениеДереваToolStripMenuItem.Click += new System.EventHandler(this.разрушениеДереваToolStripMenuItem_Click);
+            // 
             // оПрограммеToolStripMenuItem
             // 
             this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
             this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(118, 24);
             this.оПрограммеToolStripMenuItem.Text = "О программе";
+            this.оПрограммеToolStripMenuItem.Click += new System.EventHandler(this.оПрограммеToolStripMenuItem_Click);
             // 
             // выходToolStripMenuItem
             // 
@@ -153,6 +157,7 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(181, 92);
             this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(457, 22);
             this.textBox1.TabIndex = 9;
             // 
@@ -160,6 +165,7 @@
             // 
             this.textBox2.Location = new System.Drawing.Point(181, 160);
             this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(457, 22);
             this.textBox2.TabIndex = 11;
             // 
@@ -177,6 +183,7 @@
             // 
             this.textBox3.Location = new System.Drawing.Point(181, 229);
             this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(457, 22);
             this.textBox3.TabIndex = 13;
             // 
@@ -190,11 +197,22 @@
             this.label3.TabIndex = 12;
             this.label3.Text = "LKP";
             // 
-            // Form1
+            // buttonRemoveElement
+            // 
+            this.buttonRemoveElement.Location = new System.Drawing.Point(17, 262);
+            this.buttonRemoveElement.Name = "buttonRemoveElement";
+            this.buttonRemoveElement.Size = new System.Drawing.Size(144, 23);
+            this.buttonRemoveElement.TabIndex = 14;
+            this.buttonRemoveElement.Text = "Remove";
+            this.buttonRemoveElement.UseVisualStyleBackColor = true;
+            this.buttonRemoveElement.Click += new System.EventHandler(this.buttonRemoveElement_Click);
+            // 
+            // Index
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(650, 277);
+            this.ClientSize = new System.Drawing.Size(650, 312);
+            this.Controls.Add(this.buttonRemoveElement);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox2);
@@ -207,7 +225,7 @@
             this.Controls.Add(this.labelInputElement);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Form1";
+            this.Name = "Index";
             this.Text = "Form1";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -234,6 +252,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button buttonRemoveElement;
     }
 }
 
