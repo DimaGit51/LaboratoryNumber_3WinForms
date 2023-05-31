@@ -92,7 +92,6 @@ namespace LaboratoryNumber_3WinForms
             else
             {
                 Node q = first;
-                Node k = null;
                 if (q.Info > p.Info)
                 {
                     InsertBeforeFirst(data);
@@ -101,7 +100,6 @@ namespace LaboratoryNumber_3WinForms
                 else
                 {
                     bool logic = false;
-                    bool logic1 = false;
                     while (q != null)
                     {
                         if (q.Link != null && q.Info < p.Info && q.Link.Info > p.Info)
