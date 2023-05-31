@@ -46,6 +46,7 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.buttonRemoveElement = new System.Windows.Forms.Button();
+            this.treeView = new System.Windows.Forms.TreeView();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -94,7 +95,7 @@
             this.выходToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(650, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(892, 28);
             this.menuStrip1.TabIndex = 7;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -158,7 +159,7 @@
             this.textBox1.Location = new System.Drawing.Point(181, 92);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(457, 22);
+            this.textBox1.Size = new System.Drawing.Size(375, 22);
             this.textBox1.TabIndex = 9;
             // 
             // textBox2
@@ -166,7 +167,7 @@
             this.textBox2.Location = new System.Drawing.Point(181, 160);
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(457, 22);
+            this.textBox2.Size = new System.Drawing.Size(375, 22);
             this.textBox2.TabIndex = 11;
             // 
             // label2
@@ -184,7 +185,7 @@
             this.textBox3.Location = new System.Drawing.Point(181, 229);
             this.textBox3.Name = "textBox3";
             this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(457, 22);
+            this.textBox3.Size = new System.Drawing.Size(375, 22);
             this.textBox3.TabIndex = 13;
             // 
             // label3
@@ -207,11 +208,19 @@
             this.buttonRemoveElement.UseVisualStyleBackColor = true;
             this.buttonRemoveElement.Click += new System.EventHandler(this.buttonRemoveElement_Click);
             // 
+            // treeView
+            // 
+            this.treeView.Location = new System.Drawing.Point(584, 30);
+            this.treeView.Name = "treeView";
+            this.treeView.Size = new System.Drawing.Size(278, 255);
+            this.treeView.TabIndex = 15;
+            // 
             // Index
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(650, 312);
+            this.ClientSize = new System.Drawing.Size(892, 303);
+            this.Controls.Add(this.treeView);
             this.Controls.Add(this.buttonRemoveElement);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label3);
@@ -253,6 +262,7 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button buttonRemoveElement;
+        public System.Windows.Forms.TreeView treeView;
     }
 }
 

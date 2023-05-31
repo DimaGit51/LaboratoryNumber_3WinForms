@@ -43,11 +43,16 @@ namespace LaboratoryNumber_3WinForms
             int[] dates = new int[listBoxElements.Items.Count];
             for (int i = 0; i < listBoxElements.Items.Count; i++) dates[i] = int.Parse(listBoxElements.Items[i].ToString());
             BalancedTree.CreatMassT(textBox1, textBox2, textBox3, dates);
+            BalancedTree.DisplayTree(treeView);
         }
 
         private void выходToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult dialogResult = MessageBox.Show("Вы точно хотите выйти из программы?", "Проверка выхода", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
 
         private void buttonRemoveElement_Click(object sender, EventArgs e)
